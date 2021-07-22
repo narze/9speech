@@ -5,9 +5,15 @@ import SpeechButtonButSvelte from '../components/SpeechButtonButSvelte.svelte';
 
 let title = '9 Speech';
 
-const data = [
-  {label: "สวัสดีครับ", filename: "sawatdeekrub", type: "React"},
-  {label: "ท่านสมาชิก", filename: "02-thansamachik", type: "Svelte"},
+interface IData {
+  label: string
+  filename: string
+  tye: string
+}
+
+const data: IData = [
+  { label: "สวัสดีครับ", filename: "sawatdeekrub", type: "React" },
+  { label: "ท่านสมาชิก", filename: "02-thansamachik", type: "Svelte" },
 ]
 
 ---
@@ -34,10 +40,11 @@ const data = [
         <header>
             <div>
                 <h1 class="text-6xl mb-8">9 Speech</h1>
+                <p class="text-base">(ตอนนี้ยังไม่มีเสียงท่านว่าที่ รมต. ใครก็ได้อัดแล้วส่งให้หน่อยจ้า)</p>
             </div>
         </header>
 
-        <div class="flex">
+        <div class="flex justify-center">
           {data.map(({label, filename, type}) => {
             if (type === 'React') {
               return <SpeechButton client:visible {label} {filename} />
