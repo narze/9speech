@@ -1,19 +1,15 @@
 ---
-// Component Imports
 import Tour from '../components/Tour.astro';
-// You can import components from any supported Framework here!
-import ReactCounter from '../components/ReactCounter.jsx';
-import SvelteCounter from '../components/SvelteCounter.svelte';
 import SpeechButton from '../components/SpeechButton.jsx';
+import SpeechButtonButSvelte from '../components/SpeechButtonButSvelte.svelte';
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = 'My Astro Site';
+let title = '9 Speech';
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+const data = [
+  {label: "สวัสดีครับ", filename: "sawatdeekrub", type: "React"},
+  {label: "ท่านสมาชิก", filename: "02-thansamachik", type: "Svelte"},
+]
+
 ---
 <html lang="en">
 <head>
@@ -42,8 +38,15 @@ let title = 'My Astro Site';
         </header>
 
         <div class="flex">
-          <SpeechButton client:visible label="สวัสดีครับ" filename="sawatdeekrub" />
-          <SpeechButton client:visible label="ท่านสมาชิก" filename="02-thansamachik" />
+          {data.map(({label, filename, type}) => {
+            if (type === 'React') {
+              return <SpeechButton client:visible {label} {filename} />
+            } else if (type === 'Svelte') {
+              return <SpeechButtonButSvelte client:visible {label} {filename} />
+            } else {
+              return <SpeechButton client:visible {label} {filename} />
+            }
+          })}
         </div>
     </main>
 </body>
