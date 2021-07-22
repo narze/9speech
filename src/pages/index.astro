@@ -37,12 +37,14 @@ let title = 'My Astro Site';
     <main>
         <header>
             <div>
-                <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-                <h1 class="text-6xl">Welcome to <a href="https://astro.build/">Astro</a></h1>
+                <h1 class="text-6xl mb-8">9 Speech</h1>
             </div>
         </header>
 
-        <SpeechButton client:visible />
+        <div class="flex">
+          <SpeechButton client:visible label="สวัสดีครับ" filename="sawatdeekrub" />
+          <SpeechButton client:visible label="ท่านสมาชิก" filename="02-thansamachik" />
+        </div>
     </main>
 </body>
 </html>
