@@ -2,6 +2,7 @@
 import Tour from '../components/Tour.astro';
 import SpeechButton from '../components/SpeechButton.jsx';
 import SpeechButtonButSvelte from '../components/SpeechButtonButSvelte.svelte';
+import RandomSpeechButton from '../components/RandomSpeechButton.svelte';
 
 let title = '9 Speech';
 
@@ -59,6 +60,10 @@ const data: IData = [
               return <SpeechButtonButSvelte client:visible {label} {filename} />
             }
           })}
+        </div>
+
+        <div class="flex justify-center items-center flex-wrap w-1/2 mx-auto mt-10">
+          <RandomSpeechButton client:visible {data} />
         </div>
     </main>
 </body>
