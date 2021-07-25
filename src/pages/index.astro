@@ -12,8 +12,13 @@ interface IData {
 }
 
 const data: IData = [
-  { label: "สวัสดีครับ", filename: "sawatdeekrub", type: "React" },
-  { label: "ท่านสมาชิก", filename: "02-thansamachik", type: "Svelte" },
+  { label: "สวัสดีครับทุกคน ผมอาร์มเองนะครับ", filename: "helloeveryone_iam_arm", type: "Svelte" },
+  { label: "ไอ้เห้ลูเซ่อ", filename: "loser", type: "Svelte" },
+  { label: "เอาไปเลยศูนย์นะ", filename: "q00point_short", type: "Svelte" },
+  { label: "เอาไปเลยศูนย์นะ คือเมิง เหมือนกับจับ ปูใส่กระด้งมาก นะคับ", filename: "q00point", type: "Svelte" },
+  { label: "สิบ สิบเต็มสิบ ติ้ง ♪", filename: "q10point", type: "Svelte" },
+  { label: "กระจอก", filename: "suck", type: "Svelte" },
+  { label: "แม่ง ค่ดโง่ววววว", filename: "verystupid", type: "Svelte" },
 ]
 
 ---
@@ -40,7 +45,7 @@ const data: IData = [
         <header>
             <div>
                 <h1 class="text-6xl mb-8">9 Speech</h1>
-                <p class="text-base">(ตอนนี้ยังไม่มีเสียงท่านว่าที่ รมต. ใครก็ได้อัดแล้วส่งให้หน่อยจ้า)</p>
+                <p class="text-base">(ใครมีเสียงเด็ดๆ ของท่านว่าที่ รมต. อัดมาเป็น .mp3 แล้วส่งให้หน่อยจ้า)</p>
             </div>
         </header>
 
@@ -51,7 +56,7 @@ const data: IData = [
             } else if (type === 'Svelte') {
               return <SpeechButtonButSvelte client:visible {label} {filename} />
             } else {
-              return <SpeechButton client:visible {label} {filename} />
+              return <SpeechButtonButSvelte client:visible {label} {filename} />
             }
           })}
         </div>
