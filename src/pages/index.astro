@@ -36,7 +36,7 @@ const data: IData = [
             display: flex;
             flex-direction: column;
             gap: 1em;
-            max-width: min(100%, 68ch);
+            /* max-width: min(100%, 68ch); */
         }
     </style>
 </head>
@@ -49,7 +49,7 @@ const data: IData = [
             </div>
         </header>
 
-        <div class="flex justify-center">
+        <div class="flex justify-center items-center flex-wrap w-1/2 mx-auto mt-10">
           {data.map(({label, filename, type}) => {
             if (type === 'React') {
               return <SpeechButton client:visible {label} {filename} />
