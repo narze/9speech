@@ -17,5 +17,5 @@
   class="text-xl text-center px-4 py-2 rounded bg-red-500 m-4"
   on:click={play}
 >
-  Random
+  🎲 Random
 </button>
