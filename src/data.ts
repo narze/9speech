@@ -26,4 +26,5 @@ export const data: IData[] = [
   { label: "เมิงควายหรือเมิงควายเนี่ยไอเห้", filename: "udumb", type: "Svelte" },
   { label: "อิสโซวกู๊ดดดด", filename: "sogood", type: "Svelte" },
   { label: "เยสสส อิสโซกู๊ดดด", filename: "yessogood", type: "Svelte" },
+  { label: "Error no connection ~", filename: "error-no-connection", type: "Svelte" },
 ];
