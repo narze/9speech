@@ -28,4 +28,5 @@ export const data: IData[] = [
   { label: "เยสสส อิสโซกู๊ดดด", filename: "yessogood", type: "Svelte" },
   { label: "Error no connection ~", filename: "error-no-connection", type: "Svelte" },
   { label: "ยินดีต้อนรับเข้าสู่มหากาพย์แห่งดวงดาว star wars adventure", filename: "welcome-to-starwars-adventure", type: "Svelte"},
+  { label: "That was F-- AWESOME!!", filename: "wow-that-was-fxing-awesome", type: "Svelte"},
 ];
