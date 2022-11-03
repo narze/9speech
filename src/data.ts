@@ -3,7 +3,7 @@ interface IData {
   filename: string
   type: string
 }
-  
+
 export const data: IData[] = [
   { label: "สวัสดีครับทุกคน ผมอาร์มเองนะครับ", filename: "helloeveryone_iam_arm", type: "Svelte" },
   { label: "ไอ้เห้ลูเซ่อ", filename: "loser", type: "Svelte" },
@@ -27,6 +27,7 @@ export const data: IData[] = [
   { label: "อิสโซวกู๊ดดดด", filename: "sogood", type: "Svelte" },
   { label: "เยสสส อิสโซกู๊ดดด", filename: "yessogood", type: "Svelte" },
   { label: "Error no connection ~", filename: "error-no-connection", type: "Svelte" },
-  { label: "ยินดีต้อนรับเข้าสู่มหากาพย์แห่งดวงดาว star wars adventure", filename: "welcome-to-starwars-adventure", type: "Svelte"},
-  { label: "That was F-- AWESOME!!", filename: "wow-that-was-fxing-awesome", type: "Svelte"},
+  { label: "ยินดีต้อนรับเข้าสู่มหากาพย์แห่งดวงดาว star wars adventure", filename: "welcome-to-starwars-adventure", type: "Svelte" },
+  { label: "That was F-- AWESOME!!", filename: "wow-that-was-fxing-awesome", type: "Svelte" },
+  { label: "ป๊องๆ แถ่มแหม", filename: "pongpong-tamtam", type: "Svelte" },
 ];
